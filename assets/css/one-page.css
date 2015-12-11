@@ -1,0 +1,39 @@
+.header{
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)), url('../images/header1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:cover;
+	background-attachment: fixed;
+	height: 100vh;
+	text-transform: uppercase;
+}
+
+.header-subtitle{
+    text-transform: lowercase;
+}
+
+.header-subtitle .typed{
+    text-transform: uppercase;
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
