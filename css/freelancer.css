@@ -217,6 +217,7 @@ video{
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    font-family: "Raleway";
 }
 
 .mission .vision-objective i{
