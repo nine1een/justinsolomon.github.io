@@ -1,0 +1,8 @@
+
+# Proxy rules for BaseKit site: "ccsmidmo.com"
+DirectoryIndex index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ http://gator2020-ccsmidmo-primary.cluster2.hgsitebuilder.com/$1 [P,L]
+# END proxy rules for "ccsmidmo.com"
