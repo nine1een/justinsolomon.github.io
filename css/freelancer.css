@@ -172,7 +172,7 @@ video{
     }
 }
 
-@media(max-width : 370px) {
+@media(max-width : 480px) {
     
     .cta-sub-text{
         font-size: 18px;
@@ -197,7 +197,8 @@ video{
 }
 
 .mission .objectives{
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .mission .vision-objective{
@@ -239,6 +240,13 @@ video{
     .mission .vision-objective{
         margin-left: 50px;
         margin-right: 50px; 
+    }
+}
+
+@media(max-width:480px) {
+    .mission .vision-objective{
+        margin-left: 10px;
+        margin-right: 10px; 
     }
 }
 /*Navbar*/
@@ -310,7 +318,7 @@ section.success a.active {
     color: #2c3e50;
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     section {
         padding: 75px 0;
     }
