@@ -295,7 +295,7 @@ video{
     .about-us{
         letter-spacing: -1px;
     }
-    .about-us h2{
+    .heading{
         font-size: 28px;
     }
 }
@@ -343,7 +343,7 @@ video{
     display: block
 }
 .navbar-brand:before{
-        content: "ChristianServiceCo";
+        content: "Christian Service Co";
 }
 
 section {
@@ -365,31 +365,88 @@ section h2 {
     }
 }
 
+/*Services*/
+.services{
+    background-color: #eee;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.services-description{
+    font-family: "Raleway";
+    margin-bottom: 40px;
+}
+
+.short-hr{
+    width: 20%;
+    height: 4px;
+    background-color: rgba(0,0,0,0.8);
+    margin-bottom: 20px;
+}
 #portfolio .portfolio-item {
     right: 0;
-    margin: 0 0 15px;
+    margin: 0 0 30px;
 }
 
 #portfolio .portfolio-item .portfolio-link {
     display: block;
     position: relative;
-    margin: 0 auto;
-    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    background-color: #000;
+    border-radius: 2px;
 }
+
+#portfolio .portfolio-item .portfolio-item-title{
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-size: 36px;
+    padding: 25px 0 0 20px;
+    margin: 0;
+}
+
 
 #portfolio .portfolio-item .portfolio-link .caption {
     position: absolute;
-    width: 100%;
+    width: 0%;
     height: 100%;
     opacity: 0;
+    right: 0;
     background: rgba(24,188,156,.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .caption:hover {
+#portfolio .portfolio-item .portfolio-link .janitorial {
+    background: rgba(124,65,236,.5);
+}
+
+#portfolio .portfolio-item .portfolio-link .industrial {
+    background: rgba(67,100,144,.5);
+}
+
+#portfolio .portfolio-item .portfolio-link .stripping-waxing {
+    background: rgba(200,123,156,.5);
+}
+
+#portfolio .portfolio-item .portfolio-link .carpet {
+    background: rgba(124,172,115,.5);
+}
+
+#portfolio .portfolio-item .portfolio-link .protective {
+    background: rgba(155,255,156,.5);
+}
+
+#portfolio .portfolio-item .portfolio-link .more {
+    background: rgba(255,255,0,.5);
+}
+
+#portfolio .portfolio-item:hover .portfolio-link .caption {
     opacity: 1;
+    width: 25%;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -414,6 +471,17 @@ section h2 {
 
 #portfolio * {
     z-index: 2;
+}
+
+@media(max-width:480px) {
+    .services{
+        text-align: left !important;
+    }
+    
+    .short-hr{
+        margin-left: 0;
+        width: 75%;
+    }
 }
 
 /*buttons*/

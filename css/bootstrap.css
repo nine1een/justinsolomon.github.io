@@ -5040,7 +5040,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     float: right;
     margin-right: 15px;
     padding: 9px 10px;
-    margin-top: 13px;
+    margin-top: 11px;
     margin-bottom: 13px;
     background-color: transparent;
     background-image: none;
@@ -5055,13 +5055,46 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .navbar-toggle .icon-bar {
     display: block;
     width: 30px;
-    height: 4px;
+    height: 5px;
     border-radius: 1px;
+    
+    transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 }
 
-.navbar-toggle .icon-bar+.icon-bar {
-    margin-top: 6px;
+.navbar-toggle .icon-bar.top-bar {
+    margin-bottom: 11px;
+    
+    transform: rotate(45deg);
+    transform-origin: 10% 30%;
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 10% 30%;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 10% 30%;
+}
+
+.navbar-toggle .icon-bar.bottom-bar{
+    
+    transform: rotate(-45deg);
+    transform-origin: 10% 80%;
+    -ms-transform: rotate(-45deg);
+    -ms-transform-origin: 10% 80%;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 10% 80%;
+}
+
+.navbar-toggle.collapsed .icon-bar.top-bar{
+    margin-bottom: 6px;
+}
+
+.navbar-toggle.collapsed .icon-bar.bottom-bar{
     width: 25px;
+}
+
+.navbar-toggle.collapsed .icon-bar.top-bar,
+.navbar-toggle.collapsed .icon-bar.bottom-bar{
+    transform: rotate(0);
 }
 
 @media (min-width:768px) {

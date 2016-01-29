@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="owl-carousel/owl.theme.css">
     
     <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">    
+    <link href="css/freelancer.css" rel="stylesheet">  
 
     <!-- Custom Fonts -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -43,10 +43,10 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#page-top"></a>
             </div>
@@ -183,12 +183,12 @@
             
             <div class="row">
                 <div class="col-md-6 col-md-offset-1">
-                    <h2 class="uppercase slim">Who we are</h2>
+                    <h2 class="uppercase slim heading">Who we are</h2>
                     <p>Christian Service Company was founded in Jefferson City, MO in 1980 by Steve &amp; Karen Griggs.  The original focus of the company was strictly on commercial cleaning maintenance.  Today, we stand alone as the premier full-service cleaning company in Mid-Missouri.  We provide residential and commercial cleaning, along with our specialized floor cleaning. Christian Service Company has a strong reputation for providing high quality cleaning at affordable prices. </p>
                 </div><!--end of col-->
                 
                 <div class="col-md-4 text-right about-us-aside">
-                    <h2 class="uppercase slim">We promise</h2>
+                    <h2 class="uppercase slim heading">We promise</h2>
                     <p>Whether it is once a month, or every night, we ensure that everything is done right. From toilets to windows, we do it all. We take pride in our employees and commitment to meeting your needs.</p>
                 </div>
             </div>
@@ -196,76 +196,87 @@
     </section><!--/about-->
     
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <section class="services" id="portfolio">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="uppercase slim">What we do</h2>
-                    <hr class="star-primary">
+            <div class="row service-heading">
+                <div class="col-md-12">
+                    <h2 class="uppercase slim heading">What we do</h2>
+                    <hr class="short-hr">
                 </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <p class="services-description">All Services offered are available for residential and commercial customers. Browse through our site to see all services offered. If you know what type of work you would like done feel free to enter your information below for a free estimate within 24 hours!</p>
+                </div>                
             </div>
+            
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
+               
+                <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                        <h3 class="portfolio-item-title">Janitorial<br>Services</h3>
+                        <div class="caption janitorial">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-mail-forward fa-2x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                
+                <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                       <h3 class="portfolio-item-title">Carpet<br>Cleaning</h3>
+                        <div class="caption carpet">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-mail-forward fa-2x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
+                
+                <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                       <h3 class="portfolio-item-title">Stripping &amp;<br>Waxing</h3>
+                        <div class="caption stripping-waxing">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-mail-forward fa-2x"></i>
                             </div>
-                        </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
+                        </div> 
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                
+                <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <h3 class="portfolio-item-title">Industrial<br>Services</h3>
+                        <div class="caption industrial">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-mail-forward fa-2x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                
+                <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <h3 class="portfolio-item-title">Protective<br>Services</h3>
+                        <div class="caption protective">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-mail-forward fa-2x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
+                
+                <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <h3 class="portfolio-item-title">More...</h3>
+                        <div class="caption more">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
+                                <i class="fa fa-mail-forward fa-2x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
                     </a>
                 </div>
             </div>
+            
         </div>
     </section>
 
