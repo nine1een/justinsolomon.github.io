@@ -1,11 +1,17 @@
 .header{
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)), url('../images/header1.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.0));
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size:cover;
 	background-attachment: fixed;
 	height: 100vh;
 	text-transform: uppercase;
+    
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
 
 .header-subtitle{

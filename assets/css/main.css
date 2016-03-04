@@ -52,7 +52,7 @@ html, body{
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:active{
-    color: #aaa;
+    color: rgba(251, 201, 0,1);
     
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -84,6 +84,7 @@ html, body{
 
 .navbar-default .navbar-toggle{
     border-color: transparent;
+    margin-top: 0px;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -93,23 +94,10 @@ html, body{
 }
 
 .navbar-default .navbar-toggle .icon-bar{
-    
-    background-color: #eee;
-    height: 3px;
-    
-    /*when icon is clicked*/
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    transform: rotate(135deg);
-    
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-.navbar-default .navbar-toggle.collapsed .icon-bar{
+    display: inline-block;
+    background-color: rgba(251, 201, 0,1);
+    height: 2px;
+    width: 19px;
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -o-transform: rotate(0);
@@ -120,14 +108,33 @@ html, body{
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
-
-.navbar-default .navbar-toggle.collapsed .icon-bar-middle{
-    width: 18px;
+.navbar-default .navbar-toggle.collapsed .icon-bar .icon-bar-top{
+    margin-right: -2px;
 }
 
-.navbar-default .navbar-toggle.collapsed .icon-bar-bottom{
-    width: 15px;
+.navbar-default .navbar-toggle.collapsed .icon-bar + .icon-bar{
+    margin-left: -12px;
 }
+
+.navbar-default .navbar-toggle.collapsed .icon-bar{
+    background-color: #eee;
+    
+    /*when icon is clicked*/
+    -webkit-transform: rotate(110deg);
+    -moz-transform: rotate(110deg);
+    -o-transform: rotate(110deg);
+    transform: rotate(110deg);
+    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.navbar-default .navbar-toggle .icon-bar + .icon-bar{
+    margin-left: -20px;
+}
+
 
 .navbar-default .navbar-collapse{
     border-color: transparent;
@@ -196,7 +203,7 @@ html, body{
 
 @media(max-width:498px) {
     #header .header-body .header-title {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     #header .header-body .header-subtitle {
@@ -206,7 +213,7 @@ html, body{
 
 /*Sections*/
 .content-section{
-    padding: 100px 0;
+    padding: 100px 10px;
     color: #eee;
 }
 
@@ -220,15 +227,6 @@ html, body{
     top: 0px;
     width: 100%;
     text-align: left;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-}
-
-.section-title.lower{
-    color: #fff;
-    letter-spacing: -1px;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -252,7 +250,7 @@ html, body{
 
 .img-filler > img{
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .img-caption{
@@ -277,24 +275,42 @@ html, body{
     transition-timing-function: cubic-bezier(.615, .19, .305, .91)
 }
 
-#myWork .work-grid .work-item:hover{
-    background-color: rgba(251, 201, 0,1);
-    color: #0F0F0F;
-    -webkit-transition: all .3s cubic-bezier(.615, .19, .305, .91);
-    transition: all .3s cubic-bezier(.615, .19, .305, .91);
-    -webkit-transition-timing-function: cubic-bezier(.615, .19, .305, .91);
-    transition-timing-function: cubic-bezier(.615, .19, .305, .91)
-}
-
-#myWork .work-grid .work-item:hover > .work-link{
-    color: #0F0F0F;
-    margin-left: 0;
+#myWork .work-grid .work-item > .work-link{
+    color: rgba(251, 201, 0,1);
+    opacity: 1;
     
     -webkit-transition: all .3s cubic-bezier(.615, .19, .305, .91);
     transition: all .3s cubic-bezier(.615, .19, .305, .91);
     -webkit-transition-timing-function: cubic-bezier(.615, .19, .305, .91);
     transition-timing-function: cubic-bezier(.615, .19, .305, .91)
 }
+
+@media(min-width:768px) {
+    
+    #myWork .work-grid .work-item:hover{
+        background-color: rgba(251, 201, 0,1);
+        color: #0F0F0F;
+        -webkit-transition: all .3s cubic-bezier(.615, .19, .305, .91);
+        transition: all .3s cubic-bezier(.615, .19, .305, .91);
+        -webkit-transition-timing-function: cubic-bezier(.615, .19, .305, .91);
+        transition-timing-function: cubic-bezier(.615, .19, .305, .91)
+    }
+    
+    #myWork .work-grid .work-item > .work-link{
+        margin-left: -1000px;
+    }
+
+    #myWork .work-grid .work-item:hover > .work-link{
+        color: #0F0F0F;
+        margin-left: 0;
+
+        -webkit-transition: all .3s cubic-bezier(.615, .19, .305, .91);
+        transition: all .3s cubic-bezier(.615, .19, .305, .91);
+        -webkit-transition-timing-function: cubic-bezier(.615, .19, .305, .91);
+        transition-timing-function: cubic-bezier(.615, .19, .305, .91)
+    }
+}
+
 
 #myWork .work-grid a:hover{
     text-decoration: none;
@@ -304,16 +320,7 @@ html, body{
     width: 90%;
 }
 
-#myWork .work-grid .work-item .work-link{
-    color: rgba(251, 201, 0,1);
-    opacity: 1;
-    margin-left: -1000px;
-    
-    -webkit-transition: all .3s cubic-bezier(.615, .19, .305, .91);
-    transition: all .3s cubic-bezier(.615, .19, .305, .91);
-    -webkit-transition-timing-function: cubic-bezier(.615, .19, .305, .91);
-    transition-timing-function: cubic-bezier(.615, .19, .305, .91)
-}
+
 
 #myWork .work-grid .work-item .work-link:hover{
     opacity: 0.7;
