@@ -399,7 +399,7 @@
         strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
         stringsElement: null,
         // typing speed
-        typeSpeed: 0,
+        typeSpeed: 3000,
         // time before typing starts
         startDelay: 0,
         // backspacing speed
@@ -409,13 +409,13 @@
         // time before backspacing
         backDelay: 500,
         // loop
-        loop: false,
+        loop: true,
         // false = infinite
         loopCount: false,
         // show cursor
         showCursor: true,
         // character for cursor
-        cursorChar: "|",
+        cursorChar: "",
         // attribute to type (null == text)
         attr: null,
         // either html or text

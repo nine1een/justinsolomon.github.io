@@ -1,56 +1,52 @@
-///////////////////////////////
-// One page Smooth Scrolling
-///////////////////////////////
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
+//show  navbar fter scroll
+function collapseNavbar() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("scrolled");
+    } else {
+        $(".navbar-fixed-top").removeClass("scrolled");
     }
+}
+
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);
+
+function lowerSectionTitle() {
+    if ($(".navbar").offset().top > 300) {
+        $(".section-title").addClass("lower");
+    } else {
+        $(".section-title").removeClass("lower");
+    }
+}
+
+$(window).scroll(lowerSectionTitle);
+$(document).ready(lowerSectionTitle);
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
 });
 
-
-
-$(document).ready(function() {
-
-    // static navigationbar
-    var changeStyle = $('#navigation-bar');
-
-    function scroll() {
-        if ($(window).scrollTop() > 640) {
-            changeStyle.addClass('navbar-fixed-top');
-            changeStyle.addClass('one-page-nav');
-        } else {
-            changeStyle.removeClass('navbar-fixed-top');
-            changeStyle.removeClass('one-page-nav');
-        }
-    }
-
-    document.onscroll = scroll;
-
-    $('.testimonial-owl').owlCarousel({
-        items: 1
-    });
-
-    $('.add-owl').owlCarousel({
-        items: 4,
-        nav: true,
-        navText: false,
-        dots: false,
-        loop: true
-    });
-
-    $('.twitter-owl').owlCarousel({
-        items: 1,
-        nav: true,
-        navText: false,
-        dots: false,
-        loop: true
-    });
-
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+  if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+    $('.navbar-toggle:visible').click();
+  }
 });
+
+$(function(){
+    $(".typed").typed({
+        strings: ["Web Developer", "C# Developer", "Photographer", "Producer"],
+        typeSpeed: 50,
+        loop: true,
+        cursorChar: "",
+        backDelay: 2000,
+        startDelay: 1000,
+    });
+});
+
