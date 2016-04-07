@@ -1,0 +1,609 @@
+/*
+ * KEYFRAMES
+ */
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+.animate_fadeIn{
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* 
+ *    Typography
+ */
+
+body{
+    overflow: hidden;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    background: #101010;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.menu-logo{
+    display: block;
+    width: 70px;    
+    position: fixed;
+    z-index: 999;
+    top: 50px;
+    left: 20px;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-logo:hover{
+    text-decoration: none;
+}
+
+.menu-logo:hover > .icon-bar{
+    
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.menu-logo .icon-bar{
+    background-color: #eee;
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+    /*when icon is clicked*/
+    -webkit-transform: rotate(110deg);
+    -moz-transform: rotate(110deg);
+    -o-transform: rotate(110deg);
+    transform: rotate(110deg);
+    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.menu-logo .icon-bar + .icon-bar{
+    margin-left: -20px;
+}
+
+/*Projectssss*/
+#feed{
+    height: 100vh;
+}
+
+.p-container{
+    background-color: #101010;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+}
+
+.p-container:first-child{
+    animation: fadeIn 3s ease-in forwards;
+}
+
+.p-container > .p-info{
+    height: 100%;
+    padding: 0 85px 0 120px;
+    background-color: #101010;
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p-container > .p-info.animate_fadeIn{
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.project-info{
+    color: #ddd;
+    overflow: hidden;
+}
+
+.project-info > .project-title{
+    font-size: 67px;
+    margin: 0;
+}
+
+.project-info > .project-subtitle{
+    font-size: 22px;
+    font-style: italic
+}
+
+.project-info > .project-description{
+    font-size: 16px;
+}
+
+.project-info > .additional-info > span{
+    color: #999;
+    display: block;
+}
+
+.link-to-project{
+    font-size: 16px;
+    color: #E36468;
+    transition: all 0.25s ease;
+}
+
+.link-to-project:hover{
+    color: #eee;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    outline: 0;
+}
+
+.link-to-project:focus,
+.link-to-project:active{
+    color: inherit;
+}
+
+.p-container > .p-image{
+    background-color: #101010;
+    height: 100%;
+}
+
+.mobile-project-info{
+    display: none;
+}
+
+#project-1 > .p-info{
+    background-color: #060701;
+}
+
+#project-1 > .p-image{
+    background: url(../img/TheParty/0316-0016.jpg);
+    background-size: cover;
+    background-position: 50% 16%;
+}
+
+#project-2 > .p-info{
+    background-color: #C28D3A;
+}
+
+#project-2  .project-info{
+    color: #101010;
+}
+
+#project-2 .link-to-project{
+    color: #eee;
+}
+
+#project-2 .link-to-project:hover{
+    color: #101010;
+}
+
+#project-2 > .p-image{
+    background: url(../img/Sundry1/1.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+#project-3 > .p-info{
+    background-color: #1B2113;
+}
+
+#project-3 .link-to-project{
+    color: #EC6202;
+}
+
+#project-3 .link-to-project:hover{
+    color: #eee;
+}
+
+#project-3 > .p-image{
+    background: url(../img/PIML/0319-0035.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+}
+
+#project-4 > .p-info{
+    background-color: #481C0A;
+}
+
+#project-4 > .p-image{
+    background: url(../img/BigKase/1.jpg);
+    background-size: cover;
+    background-position: 0% 40%;
+}
+
+#project-5 > .p-info{
+    background-color: #061407;
+}
+
+#project-5 .project-subtitle{
+    color: #8AB0A4;
+}
+#project-5 .link-to-project{
+    color: #8AB0A4;
+}
+
+#project-5 .link-to-project:hover{
+    color: #fff;
+}
+
+#project-5 > .p-image{
+    background: url(../img/TheGirls-Cover.jpg);
+    background-size: cover;
+    background-position: 0% 40%;
+}
+
+#project-6 > .p-info{
+    background-color: #160e0d;
+}
+
+#project-6 .project-subtitle{
+    color: #8AB0A4;
+}
+#project-6 .link-to-project,
+#project-6 .link-to-project:focus,
+#project-6 .link-to-project:active{
+    color: #6299C5;
+}
+
+#project-6 .link-to-project:hover{
+    color: #fff;
+}
+
+#project-6 > .p-image{
+    background: url(../img/Blue-Cover.jpg);
+    background-size: cover;
+    background-position: 0% 90%;
+}
+
+.p-container > .mobile-p-image{
+    display: none;
+}
+
+@media (max-width: 991px){
+    
+    .p-container > .p-info{
+        display: none;
+    }
+    
+    .p-container > .mobile-p-image{
+        display: block;
+        height: 25vh;
+    }
+    
+    .p-container > .mobile-1{
+        background-color: #99badd;
+    }
+    
+    .p-container > .mobile-2{
+        background-color: #ba99dd;
+    }
+    
+    .p-container > .mobile-3{
+        background-color: #badd99;
+    }
+    
+    .p-container > .p-info{
+        height: 75vh;
+        padding: 0 30px;
+        overflow: scroll;
+    }
+    
+    .mobile-project-info{
+        display: block;
+        color: #ddd;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .mobile-project-info > .project-title{
+        font-size: 50px;
+    }
+    
+    .project-info > .project-description{
+        font-size: 16px;
+    }
+    
+    #project-2 .link-to-project,
+    #project-2 .link-to-project:focus,
+    #project-2 .link-to-project:active{
+        color: #C28D3A;
+    }
+    
+    
+    #project-3 .link-to-project,
+    #project-3 .link-to-project:focus,
+    #project-3 .link-to-project:active{
+        color: #D34B48;
+    }
+    
+    
+    
+        
+
+}
+
+/*
+ * Dot Navigation w/ Tooltips
+ */
+
+#dot-nav{    
+	bottom: 3vh;
+    left: 25vw;
+    z-index: 999;
+    position: fixed;
+    transform: translateX(-50%)
+}
+
+#dot-nav ul {
+	list-style:none;
+	margin:0;
+	padding: 0;
+}
+#dot-nav li {
+    display: inline-block;
+	position: relative;
+    margin-right: 5px;
+	
+}
+#dot-nav a.active, #dot-nav a:hover {
+	background-color: #fff;
+}
+
+#dot-nav a {
+    background-color: transparent;
+	border-radius: 15px;
+    border: 1px solid #fff;
+    padding: 2px 10px;
+    outline: 0;
+}
+
+/*
+ *    MODALS
+ */
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.modal-backdrop{
+    opacity: 1 !important;
+    background-color: #060701;
+}
+
+.modal-dialog{
+    margin: 0 auto;
+}
+
+.modal-dialog, .modal-content{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body{
+    height: 100%;
+    padding: 40px 0;
+    position: relative;
+}
+
+.modal-body .close{
+    position: fixed;
+    right: 5%;
+    top: 10%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #eee;
+    opacity: 1;
+    text-shadow: none;
+    
+}
+
+.modal-title{
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    font-size: 30px
+}
+
+.modal-body > .additional-info{
+    font-size: 18px;
+    position: fixed;
+    left: 10%;
+    bottom: 10%;
+    list-style: none;
+    padding: 20px 0;
+    border-top: 2px solid;
+}
+
+.modal-body > .additional-info > li{
+    display: block;
+    margin: 0;
+}
+
+.gallery{
+    height: 100%;
+}
+
+.gallery-images{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.gallery-images > img{
+    margin: 0 auto;
+    max-height: 100%;
+    margin-bottom: 100px;
+}
+
+.gallery-images img:last-child{
+    margin-bottom: 0;
+}
+
+
+#project-1-gallery .modal-content{
+    color: #eee;
+    background-color: #060701;
+}
+
+#project-1-gallery ::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+#project-1-gallery ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d8c7b7
+}
+
+#project-2-gallery .modal-content{
+    color: #eee;
+    background-color: #C28D3A;
+}
+
+#project-2-gallery ::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+#project-2-gallery ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d8c7b7
+}
+
+
+#project-3-gallery .modal-content{
+    color: #eee;
+    background-color: #1B2113;
+}
+
+#project-3-gallery ::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+#project-3-gallery ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #eee
+}
+
+
+#project-4-gallery .modal-content{
+    color: #eee;
+    background-color: #481C0A;
+}
+
+#project-4-gallery ::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+#project-4-gallery ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d8c7b7
+}
+
+
+#project-5-gallery .modal-content{
+    color: #eee;
+    background-color: #061407;
+}
+
+#project-5-gallery ::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+#project-5-gallery ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d8c7b7
+}
+
+#project-6-gallery .modal-content{
+    color: #eee;
+    background-color: #160e0d;
+}
+
+#project-6-gallery ::-webkit-scrollbar {
+    width: 11px;
+}
+ 
+#project-6-gallery ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d8c7b7
+}
+
+@media(max-width: 991px){
+    
+    .modal-body{
+        padding: 0;
+    }
+    
+    .modal-title{
+        display: none;
+    }
+
+    .modal-body > .additional-info{
+        display: none;
+    }
+    
+    .gallery-images > img{
+        margin-bottom: 30px;
+    }
+}
+
+
+/*
+ * Media Queries
+ */
+
+
+@media(max-width: 991px){
+    
+    .menu-logo{
+        left: 20px;
+        width: auto;
+        top: 0;
+    }
+    
+    #dot-nav{
+        left: 50vw;
+    }
+    
+    #dot-nav li{
+        margin-right: 0;
+    }
+}

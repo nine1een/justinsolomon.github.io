@@ -432,3 +432,25 @@
 
 
 }(window.jQuery);
+
+$(function(){
+    $(".typed").typed({
+        strings: ["Web Developer", "C# Developer"],
+        typeSpeed: 50,
+        loop: true,
+        cursorChar: "",
+        backDelay: 2000,
+        startDelay: 1000,
+    });
+});
+
+$(function(){
+    $(".typed-2").typed({
+        strings: ["Justin."],
+        typeSpeed: 50,
+        loop: true,
+        cursorChar: "",
+        backDelay: 2000,
+        startDelay: 1000,
+    });
+});

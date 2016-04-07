@@ -1,26 +1,3 @@
-//show  navbar fter scroll
-function collapseNavbar() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("scrolled");
-    } else {
-        $(".navbar-fixed-top").removeClass("scrolled");
-    }
-}
-
-$(window).scroll(collapseNavbar);
-$(document).ready(collapseNavbar);
-
-function lowerSectionTitle() {
-    if ($(".navbar").offset().top > 300) {
-        $(".section-title").addClass("lower");
-    } else {
-        $(".section-title").removeClass("lower");
-    }
-}
-
-$(window).scroll(lowerSectionTitle);
-$(document).ready(lowerSectionTitle);
-
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
@@ -28,7 +5,7 @@ $(function() {
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+        return false;
     });
 });
 
@@ -39,14 +16,46 @@ $('.navbar-collapse ul li a').click(function() {
   }
 });
 
-$(function(){
-    $(".typed").typed({
-        strings: ["Web Developer", "C# Developer", "Photographer", "Producer"],
-        typeSpeed: 50,
-        loop: true,
-        cursorChar: "",
-        backDelay: 2000,
-        startDelay: 1000,
+/* Photography Scripts */
+
+/* show div's on scroll */
+$(document).ready(function() {
+    
+    
+    /* Check the location of each desired element */
+        $('.p-container + .p-container').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).height() - 200;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                $(this).addClass('animate_fadeIn');
+            }
+            
+        });
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+        
+        /* Check the location of each desired element */
+        $('.p-container + .p-container').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).height() - 200;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                $(this).addClass('animate_fadeIn');
+            }
+            
+        }); 
+    
     });
+    
 });
+
+
+
+
 
